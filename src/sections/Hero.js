@@ -1,0 +1,32 @@
+// src/sections/Hero.js
+import React from 'react';
+import SocialLinks from '../components/SocialLinks'; // Import the social links
+import ProfilePic from '../assets/profile.jpg'; // Make sure the path and filename match your image
+import './Hero.css'; // Create this CSS file next
+
+const Hero = () => {
+  return (
+    <section id="home" className="hero-section">
+      <div className="hero-content">
+        <p className="welcome-text">Welcome to my portfolio</p>
+        <h1 className="hero-title">
+          Hello, I'm <br />
+          <span className="name-highlight">Narmada Gunathilaka</span>
+        </h1>
+        <p className="hero-description">
+          Motivated and detail-oriented Information Systems undergraduate skilled in software design, web development, UI/UX, and agile teamwork.
+        </p>
+        <div className="hero-buttons">
+          <button className="btn primary-btn">View Portfolio</button>
+          <button className="btn secondary-btn">Contact Me</button>
+        </div>
+        <SocialLinks /> {/* Integrate the social links component */}
+      </div>
+      <div className="hero-image-container">
+        <img src={ProfilePic} alt="Narmada Gunathilaka" className="hero-profile-pic" />
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

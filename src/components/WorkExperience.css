@@ -1,0 +1,67 @@
+.work-experience-section {
+  margin-bottom: 3rem;
+}
+
+/* Reusing .component-title from Education.css, but if you want specific styling,
+   you can define it here. For now, it will inherit. */
+/* .component-title { ... } */
+
+.work-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  justify-content: center;
+}
+
+.experience-card {
+  background-color: #1a202c; /* Darker background for cards */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card .card-icon {
+  font-size: 3rem;
+  color: #63b3ed;
+  margin-bottom: 1rem;
+}
+
+.experience-card .card-content h4 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card .card-content .company {
+  font-size: 1rem;
+  color: #a0aec0;
+  margin-bottom: 0.3rem;
+}
+
+.experience-card .card-content .duration {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin-bottom: 0.8rem;
+}
+
+.experience-card .card-content .description {
+  font-size: 1rem;
+  color: #cbd5e0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .work-experience-grid {
+    grid-template-columns: 1fr;
+  }
+}

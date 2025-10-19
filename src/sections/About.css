@@ -1,0 +1,67 @@
+.about-section {
+  padding: 5rem 5%; /* Consistent padding with other sections */
+  background-color: #2d3748; /* Slightly lighter dark background for contrast */
+  color: #cbd5e0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block; /* To allow underline effect */
+}
+
+/* Underline effect for section titles */
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px; /* Width of the underline */
+  height: 4px;
+  background-color: #63b3ed;
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #a0aec0;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column; /* Stack sub-sections by default */
+  gap: 4rem; /* Space between Education, Work, Skills */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 4%;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+}

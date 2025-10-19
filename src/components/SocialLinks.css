@@ -1,0 +1,28 @@
+/* src/components/SocialLinks.css */
+.social-links {
+  display: flex;
+  gap: 1.5rem; /* Space between icons */
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  color: #cbd5e0; /* Light icon color */
+  font-size: 1.8rem; /* Icon size */
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #63b3ed; /* Highlight on hover */
+}
+
+/* Optional: Add some responsiveness if needed, but usually icon sets scale well */
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center; /* Center icons on smaller screens */
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,184 @@
+/* src/sections/Hero.css */
+.hero-section {
+  display: flex;
+  flex-direction: row; /* Default for desktop */
+  justify-content: center;
+  align-items: center;
+  gap: 4rem; /* Space between text and image */
+  padding: 6rem 5%; /* Top/bottom padding for section, 5% horizontal */
+  min-height: calc(100vh - 60px); /* Adjust based on navbar height, ensures it fills viewport */
+  background-color: #1a202c; /* Consistent background */
+  color: #cbd5e0; /* Consistent text color */
+}
+
+.hero-content {
+  flex: 1; /* Allows content to take available space */
+  max-width: 600px; /* Max width for text content */
+  text-align: left; /* Align text to left */
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  color: #a0aec0; /* Lighter grey for welcome text */
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: 3.8rem; /* Large font size for name */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.name-highlight {
+  color: #63b3ed; /* Blue highlight for name */
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a0aec0;
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem; /* Space between buttons */
+  margin-bottom: 1.5rem; /* Space before social links */
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; /* In case you use 'a' tag for buttons */
+}
+
+.primary-btn {
+  background-color: #63b3ed;
+  color: #1a202c;
+}
+
+.primary-btn:hover {
+  background-color: #4299e1;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #63b3ed;
+  border: 2px solid #63b3ed;
+}
+
+.secondary-btn:hover {
+  background-color: #63b3ed;
+  color: #1a202c;
+  transform: translateY(-2px);
+}
+
+.hero-image-container {
+  flex: 1; /* Allows image container to take available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px; /* Max width for the image */
+  position: relative; /* For the border effect */
+}
+
+.hero-profile-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Slightly rounded corners */
+  object-fit: cover;
+  display: block; /* Removes extra space below image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  border: 5px solid #63b3ed; /* Blue border as seen in demo */
+}
+
+/* --- Responsive Styles for Hero Section --- */
+@media (max-width: 1024px) {
+  .hero-section {
+    gap: 2rem; /* Reduce gap on medium screens */
+    padding: 4rem 5%;
+  }
+
+  .hero-title {
+    font-size: 3rem; /* Adjust title size */
+  }
+
+  .hero-profile-pic {
+    border-radius: 10px;
+    border: 4px solid #63b3ed;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center text */
+    padding: 3rem 5%;
+    gap: 3rem; /* Space between stacked items */
+  }
+
+  .hero-content {
+    order: 2; /* Move content below image on mobile */
+    text-align: center;
+  }
+
+  .hero-image-container {
+    order: 1; /* Move image above content on mobile */
+    max-width: 280px; /* Smaller image on mobile */
+  }
+
+  .hero-profile-pic {
+    border-radius: 50%; /* Make image round on mobile */
+    border: 3px solid #63b3ed;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    width: 80%; /* Make buttons wider on mobile */
+    max-width: 250px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .welcome-text {
+    font-size: 0.9rem;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  .btn {
+    width: 90%;
+    max-width: 200px;
+    padding: 0.7rem 1.5rem;
+  }
+  .hero-image-container {
+    max-width: 200px;
+  }
+}
