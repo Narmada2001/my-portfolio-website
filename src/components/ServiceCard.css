@@ -1,0 +1,43 @@
+.service-card {
+  background-color: #1a202c; /* Darker background for cards */
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1; /* Allows cards to grow and shrink in flex container */
+  min-width: 280px; /* Minimum width before wrapping */
+  max-width: 380px; /* Maximum width on larger screens */
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon-wrapper {
+  font-size: 3.5rem;
+  color: #63b3ed; /* Blueish icon color */
+  margin-bottom: 1.5rem;
+  display: inline-flex; /* To center icon */
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3748; /* Slight background for icon */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 15px rgba(99, 179, 237, 0.2); /* Subtle glow around icon */
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #a0aec0;
+  line-height: 1.6;
+}
