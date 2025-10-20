@@ -16,8 +16,8 @@ const projectData = [
     status: "Capstone Project",
     description: "Web-based system for managing dengue patient records with secure authentication and ward management. Capstone project demonstrating full-stack capabilities.",
     technologies: ["React.js", "Node.js", "MongoDB Atlas", "Tailwind CSS"],
-    githubLink: "https://github.com/your-username/dengue-guard",
-    liveDemoLink: "#",
+    githubLink: "https://github.com/mayuraabhayasinghe/dengue-patient-management-system-grp4.git",
+    liveDemoLink: "https://www.linkedin.com/posts/narmada-gunathilaka-2818372a7_dengueguard-capstoneproject-healthtech-activity-7382262708949245952-3za4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEn788EBuEIa_f54UfiyzCRzgAOjZmoDgKQ",
     image: dengueGuardImage // Add the image property
   },
   {
