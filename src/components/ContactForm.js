@@ -24,7 +24,7 @@ const ContactForm = () => {
     const form = e.target;
     // Replace "YOUR_FORMSPREE_FORM_ID" with your actual Formspree form ID
     // You can find this on your Formspree form page (e.g., https://formspree.io/f/yourformid)
-    const formUrl = "https://formspree.io/f/xgvnqqpj";
+    const formUrl = "https://formspree.io/f/mqayjjwy";
 
     try {
       const response = await fetch(formUrl, {
