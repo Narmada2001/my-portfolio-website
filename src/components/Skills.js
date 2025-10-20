@@ -3,7 +3,11 @@ import './Skills.css';
 import { FaCode, FaLaptopCode, FaDatabase, FaTools, FaPaintBrush, FaUsers } from 'react-icons/fa'; // More icons!
 
 const skillsData = [
-  
+  {
+    category: "Soft Skills",
+    icon: <FaUsers />,
+    items: ["Communication", "Leadership", "Problem-Solving", "Adaptability", "Time Management", "Project Coordination", "Agile & Scrum"]
+  },
   {
     category: "Programming Languages",
     icon: <FaCode />,

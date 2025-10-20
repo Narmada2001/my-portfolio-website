@@ -1,5 +1,6 @@
+// src/components/ContactInfo.js
 import React from 'react';
-import './ContactInfo.css';
+import './ContactInfo.css'; // Make sure this CSS file exists in the same directory!
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const ContactInfo = () => {
