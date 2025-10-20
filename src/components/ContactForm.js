@@ -7,6 +7,7 @@ const ContactForm = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState(''); // State to manage submission status
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,13 +17,39 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // For now, just log the form data.
-    // In a real application, you would send this to a backend or a service like Formspree.
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! (Form submission is not active yet)');
-    setFormData({ name: '', email: '', message: '' }); // Clear form
+    setStatus('sending'); // Set status to indicate sending
+
+    const form = e.target;
+    // Replace "YOUR_FORMSPREE_FORM_ID" with your actual Formspree form ID
+    // You can find this on your Formspree form page (e.g., https://formspree.io/f/yourformid)
+    const formUrl = "https://formspree.io/f/xgvnqqpj";
+
+    try {
+      const response = await fetch(formUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        alert('Thank you for your message! I will get back to you soon.');
+        setFormData({ name: '', email: '', message: '' }); // Clear form
+      } else {
+        setStatus('error');
+        const data = await response.json();
+        alert(data.error || 'Oops! There was an error sending your message.');
+      }
+    } catch (error) {
+      setStatus('error');
+      alert('Network error! Please try again later.');
+      console.error('Submission error:', error);
+    }
   };
 
   return (
@@ -65,7 +92,11 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="submit-btn">Send Message</button>
+        <button type="submit" className="submit-btn" disabled={status === 'sending'}>
+          {status === 'sending' ? 'Sending...' : 'Send Message'}
+        </button>
+        {status === 'success' && <p className="success-message">Message sent successfully!</p>}
+        {status === 'error' && <p className="error-message">Failed to send message. Please try again.</p>}
       </form>
     </div>
   );
