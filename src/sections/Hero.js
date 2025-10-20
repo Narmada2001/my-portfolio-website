@@ -17,9 +17,8 @@ const Hero = () => {
           Motivated and detail-oriented Information Systems undergraduate skilled in software design, web development, UI/UX, and agile teamwork.
         </p>
         <div className="hero-buttons">
-          <button className="btn primary-btn">View Portfolio</button>
-          <button className="btn secondary-btn">Contact Me</button>
-        </div>
+<a href="#portfolio" className="btn primary-btn">View Portfolio</a>
+<a href="#contact" className="btn secondary-btn">Contact Me</a>        </div>
         <SocialLinks /> {/* Integrate the social links component */}
       </div>
       <div className="hero-image-container">
