@@ -1,0 +1,33 @@
+.contact-section {
+  padding: 5rem 5%;
+  background-color: #1a202c; /* Dark background */
+  color: #cbd5e0;
+}
+
+/* Reusing .section-header from About.css */
+/* .section-header { ... } */
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center items when wrapped */
+  gap: 3rem; /* Space between info and form */
+  margin-top: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contact-content {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 4%;
+  }
+  .contact-content {
+    flex-direction: column; /* Stack info and form vertically */
+    align-items: center; /* Center them when stacked */
+  }
+}

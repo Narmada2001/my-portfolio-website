@@ -1,0 +1,34 @@
+.portfolio-section {
+  padding: 5rem 5%;
+  background-color: #2d3748; /* Slightly lighter dark background for contrast */
+  color: #cbd5e0;
+}
+
+/* Reusing .section-header from About.css */
+/* .section-header { ... } */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid for project cards */
+  gap: 2.5rem; /* Space between cards */
+  margin-top: 3rem;
+  justify-items: center; /* Center items within grid cells */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 4rem 4%;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 1.5rem;
+  }
+}
