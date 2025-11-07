@@ -9,16 +9,18 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid for project cards */
+  /* Force three columns on large screens */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem; /* Space between cards */
   margin-top: 3rem;
-  justify-items: center; /* Center items within grid cells */
+  justify-items: stretch; /* Let cards fill the grid cell width */
 }
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
+/* Medium screens: 2 columns */
+@media (max-width: 1200px) {
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
